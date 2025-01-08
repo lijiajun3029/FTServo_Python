@@ -109,3 +109,5 @@ class sms_sts(protocol_packet_handler):
     def unLockEprom(self, scs_id):
         return self.write1ByteTxRx(scs_id, SMS_STS_LOCK, 0)
 
+    def WriteID(self, sts_id, new_sts_id):
+        return self.write1ByteTxRx(sts_id, SMS_STS_ID, new_sts_id)
